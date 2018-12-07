@@ -11,7 +11,7 @@ app.get("/survey", function(req, res){
 });
 
 // A default, catch-all route that leads to `home.html` and displays the home page (if using the app and URL not already defined and if not go to survey page)
-app.use( function(req, res) {
+app.get("*", function(req, res) {
     res.sendFile(path.join(__dirname + "/../public/home.html"));
 }); 
 }
